@@ -1,0 +1,37 @@
+/* CSS styles */
+.header{
+  background-color:green;
+  font-weight: bold;
+  color:black;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+}
+
+.left{
+  background-color:lightgray;
+  align-items:center;
+  justify-content:center;
+}
+
+.middle{
+  background-color:white;
+  text-align:center;
+  align-items:center;
+  justify-content:center;
+}
+
+.right{
+ background-color:lightgray;
+  align-items:center;
+  justify-content:center;
+}
+
+.footer{
+  background-color:orange;
+  text-align:center;
+  font-style: italic;
+  align-items:center;
+  justify-content:center;
+}
+

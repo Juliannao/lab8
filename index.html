@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="src/style.css">
+	<title>Авторизация в информационной системе</title>
+</head>
+<body class="bg-gray-100" style="background-size:cover;background-position:center; background-repeat:no-repeat; background:url(https://freski.shop/uploads/mural/webp/84bb6f3d-07ef-4e59-9890-d3a8fbb60994.webp) no-repeat center center fixed; background-size: cover;">
+    
+<div class=" text-black text-lg text-center p-5">
+	Информационная система "Онлайн помощник для подбора осветительного оборудования"
+</div>
+
+<div class="flex p-4 text-white"> <!-- "Ряд" "основной части" окна приложения -->
+  <div class="w-1/4 p-2"> <!-- 3/12 слева "основной части" -->
+	<div class="mb-4">
+  	<input class="form-check-input" type="radio" name="radio_role" id="label_role_user">
+  	<label class="form-check-label" for="label_role_user">
+    	Пользователь
+  	</label>
+	</div>
+    
+	<div class="mb-4">
+  	<input class="form-check-input" type="radio" name="radio_role" id="label_role_admin" checked>
+  	<label class="form-check-label" for="label_role_admin">
+    	Администратор
+  	</label>
+	</div>    
+
+	<div class="mb-4">
+  	<input class="form-check-input" type="checkbox" id="role_guest">
+  	<label class="form-check-label" for="label_role_guest">
+    	Гость
+  	</label>
+	</div>
+  </div> <!-- 3/12 слева "основной части" -->
+ 
+  <form class="w-1/2 p-2" > <!-- 6/12 посередине "основной части" -->
+	<div class="mb-4">
+  	<label for="label_email" class="block text-sm font-medium">Логин</label>
+  	<input type="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-black" id="label_email" placeholder="email@example.com" required>
+	</div>
+ 
+	<div class="mb-4">
+  	<label for="label_password" class="block text-sm font-medium">Пароль</label>
+ 	<div class="flex">
+                  	<input type="password" class="mt-1 block w-full border-black-300 text-black rounded-md shadow-sm focus:ring-blue-500 focus:border-black-500" id="label_password" placeholder="Введите пароль..." required>
+  	 
+            	<button id="login-password-visibility" type="button"
+              	class="rounded-br-md rounded-tr-md px-2">
+              	<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                	stroke="currentColor" class="size-6 block" id="login-password-visibility-on">
+                	<path stroke-linecap="round" stroke-linejoin="round"
+                  	d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                	<path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              	</svg>
+              	<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                	stroke="currentColor" class="size-6 hidden" id="login-password-visibility-off">
+                	<path stroke-linecap="round" stroke-linejoin="round"
+                  	d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+              	</svg>
+            	</button>
+          	</div>
+	</div>
+ <div class="flex justify-between mb-4">
+   <div>
+	 
+  	<input class="form-check-input" type="checkbox" id="label_role_guest">
+  	<label class="form-check-label" for="label_role_guest">
+    	Запомнить вход
+  	</label>
+   </div>
+	<div> <span id="go-pass-button" class="text-blue-500 hover:text-blue-400 hover:cursor-pointer">Забыли пароль?</span>
+	</div>
+	</div>
+  	<button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700" id="button_login">Вход</button>
+ 	<div class="text-center">
+   	<span id="go-register-button" class="text-blue-500 hover:text-blue-400 hover:cursor-pointer">Новый аккаунт</span>
+	</div>
+  </form> <!-- 6/12 посередине "основной части" -->
+
+  <div class="w-1/4 p-2"> <!-- 3/12 справа "основной части" -->
+	<label for="label_role_about" class="block text-sm font-medium" >Дополнительная информация</label>
+	<textarea class="mt-1 block w-full border-black-300 text-black rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" id="label_role_about" style="height:100px;" id="label_role_about" placeholder="Добро пожаловать!" disabled></textarea>
+  </div> <!-- 3/12 справа "основной части" -->
+</div> <!-- "Ряд" "основной части" окна приложения -->
+
+
+  <div class=" text-center text-black p-2" id="copyright">
+	Модуль авторизации информационной системы.<br>
+</div> <!-- "Нижняя часть" окна -->
+</body>
+</html>
